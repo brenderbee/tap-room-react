@@ -1,12 +1,12 @@
-# _Brenda Franco_
+# Tap Room
 
-#### _Assignment for Epicodus_
+#### _Tap Room app created in React. Assignment for Epicodus._
 
 #### By: _**Brenda Franco**_
 
 ## Description
 
-_This webpage application is designed ...._
+_This webpage application is designed to be a Tap Room app that tracks kegs. Each keg will have a name, description, ABV, and total pints left in the keg._
 
 _This project uses Webpack to bundle and minify the code. The view library is React. Babel is used to transpile ES6. All dependencies required are included in this project._
 
@@ -83,6 +83,22 @@ _Developer Dependencies_
   * webpack-dev-server^2.5.0
 
 
+### User Stories
+* As a patron, I want to see a list/menu of all available kegs. For each keg, I need to see its name, brand, price and ABV.
+* As an employee, I want to fill out a form when I tap a new keg to add it to the list.
+* As an employee, I want the option to edit a keg's properties after entering them just in case I make a mistake.
+* As a patron and/or employee, I want to see how many pints are left in a keg. (A full keg has roughly 124 pints).
+* As an employee, I want to be able to click a button next to a keg whenever I sell a pint of it. This should decrease the number of pints left by 1.
+* As an employee, I want to be able to see kegs with less than 10 pints left so I can be ready to change them.
+* As a patron, I want to have kegs prices to be color-coded for easy readability. Perhaps based on their price (greater or less than $5 per pint, perhaps).
+* As a patron, I want to use the alcohol content property to display stronger beers differently than weaker beers.
+
+_Reach Goals_
+* As an employee, I want to be able to click a button next to a keg whenever I sell a growler (32 ounce) of it.
+* As an employee, I want to be able to click a button next to a keg whenever I sell a large (64 ounce) growler.
+* As a patron, I want to filter the available kegs by style of beer.
+* As an employee, I want to select an option to put a certain keg on sale. This would lower the cost by a percentage of my choosing, and perhaps change a keg's appearance in the list to draw customers' attention to it.
+* As an employee, I might want to program a "happy hour" option I can select to put all kegs on sale.
 
 
 ### Specs
