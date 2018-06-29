@@ -8,7 +8,7 @@ function Header(){
 
   return(
     <div style={headerStyles}>
-      <h1 className="blue-bg">Help Queue</h1>
+      <h1 className="blue-bg">Tap Room</h1>
       <Link to="/">Keg List</Link> | <Link to="/newkeg">Add Keg</Link>
       <style jsx>{`
           .blue-bg:hover {
