@@ -15,7 +15,7 @@ _Development Process differences between Angular and React:_
 * While React also uses components, it's just a view library and each component contains the styles, markup, and functionality in a single jsx file.
 * While Angular supported classes through ES6 (and therefore object oriented programming), React is functional.
 * As a framework, Angular has built in directives for things like repeaters. React uses pure javascript instead since it is a library.
-* React seems to require a much smaller breakdown of components than Angular. For example, a button could be a component in React. This would probably not be the case in React.
+* React definitely seems to require a much smaller breakdown of components than Angular. For example, a button could be a component in React. This would probably not be the case in React.
 
 ## Setup/Installation Requirement
 
