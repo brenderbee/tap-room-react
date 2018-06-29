@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
-import TicketList from './TicketList';
-import NewTicketForm from './NewTicketForm';
+import KegList from './Keglist';
+import NewKegForm from './NewKegForm';
 import { Switch, Route } from 'react-router-dom';
 import Error404 from './Error404';
 
@@ -10,8 +10,8 @@ function App(){
     <div>
       <Header/>
       <Switch>
-        <Route exact path='/' component={TicketList} />
-        <Route path='/newticket' component={NewTicketForm} />
+        <Route exact path='/' component={KegList} />
+        <Route path='/newkeg' component={NewKegForm} />
         <Route component={Error404} />
       </Switch>
       <style jsx global>{`

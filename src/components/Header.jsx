@@ -9,7 +9,7 @@ function Header(){
   return(
     <div style={headerStyles}>
       <h1 className="blue-bg">Help Queue</h1>
-      <Link to="/">Home</Link> | <Link to="/newticket">Create Ticket</Link>
+      <Link to="/">Keg List</Link> | <Link to="/newkeg">Add Keg</Link>
       <style jsx>{`
           .blue-bg:hover {
             cursor: pointer;
