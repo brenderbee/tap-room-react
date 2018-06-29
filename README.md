@@ -10,6 +10,13 @@ _This webpage application is designed to be a Tap Room app that tracks kegs. Eac
 
 _This project uses Webpack to bundle and minify the code. The view library is React. Babel is used to transpile ES6. All dependencies required are included in this project._
 
+_Development Process differences between Angular and React:_
+* Angular CLI is a framework and uses components that has separate files for styles, markup, and javascript.
+* While React also uses components, it's just a view library and each component contains the styles, markup, and functionality in a single jsx file.
+* While Angular supported classes through ES6 (and therefore object oriented programming), React is functional.
+* As a framework, Angular has built in directives for things like repeaters. React uses pure javascript instead since it is a library.
+* React seems to require a much smaller breakdown of components than Angular. For example, a button could be a component in React. This would probably not be the case in React.
+
 ## Setup/Installation Requirement
 
 * Clone repository on your local computer.
@@ -101,10 +108,8 @@ _Reach Goals_
 * As an employee, I might want to program a "happy hour" option I can select to put all kegs on sale.
 
 
-### Specs
-| Behavior | Input | Output |
-| :-------------     | :------------- | :------------- |
-| The program will ... | Input: "1" | Output: true |
+### Notes
+* Add a notes section where you document unforeseen issues and questions during your development process. Commit these notes by themselves.
 
 
 
