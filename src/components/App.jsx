@@ -22,9 +22,17 @@ function App(){
           font-family: 'Helvetica', sans-serif;
           background: black;
           color: white;
+          font-size: 1rem;
         }
         a {
           text-decoration: none;
+        }
+
+        button {
+          font-size: 1rem;
+          text-transform: uppercase;
+          padding: 1.2rem;
+          color: white;
         }
         `}</style>
     </div>

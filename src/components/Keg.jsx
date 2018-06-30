@@ -42,7 +42,7 @@ function Keg(props){
           }
 
           .keg-content h3 {
-            font-size: 2rem;
+            font-size: 1.6rem;
             margin: 0;
             text-transform: uppercase;
           }
