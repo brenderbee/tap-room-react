@@ -57,7 +57,7 @@ function KegList() {
   return(
     <div>
       {masterKegList.map((keg, index) =>
-        <Keg  name={keg.name}
+        <Keg name={keg.name}
           brewer={keg.brewer}
           description={keg.description}
           abv={keg.abv}
