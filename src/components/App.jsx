@@ -6,8 +6,11 @@ import { Switch, Route } from 'react-router-dom';
 import Error404 from './Error404';
 
 function App(){
+  let mainStyles = {
+    margin: '0 30%'
+  };
   return(
-    <div>
+    <div style={mainStyles}>
       <Header/>
       <Switch>
         <Route exact path='/' component={KegList} />
@@ -17,6 +20,8 @@ function App(){
       <style jsx global>{`
         body {
           font-family: 'Helvetica', sans-serif;
+          background: black;
+          color: white;
         }
         a {
           text-decoration: none;

@@ -55,7 +55,7 @@ var masterKegList = [
 function KegList() {
 
   return(
-    <div>
+    <div className="keglist">
       {masterKegList.map((keg, index) =>
         <Keg name={keg.name}
           brewer={keg.brewer}
@@ -65,6 +65,14 @@ function KegList() {
           remaining={keg.remaining}
           key={index}/>
       )}
+      <style jsx>
+        {`
+          .keglist {
+            border: 2px solid white;
+            border-radius: 10px;
+          }
+        `}
+      </style>
     </div>
   );
 }

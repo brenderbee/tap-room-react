@@ -15,6 +15,20 @@ function Keg(props){
           <p>$ {props.price.toFixed(2)}</p>
         </div>
       </div>
+      <style jsx>
+        {`
+          .keg {
+            border-bottom: 2px solid white;
+          }
+
+          .keg-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+          }
+          `}
+      </style>
     </div>
   );
 }
