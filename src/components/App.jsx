@@ -7,7 +7,7 @@ import Error404 from './Error404';
 
 function App(){
   let mainStyles = {
-    margin: '0 30%'
+    margin: '0 10%'
   };
   return(
     <div style={mainStyles}>

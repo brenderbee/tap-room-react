@@ -14,13 +14,18 @@ function Keg(props){
             <p>ABV {props.abv}</p>
           </div>
           <div className="content-right">
-            <div>
+            <div className="price">
               <p><strong>16oz</strong></p>
               <p>$ {props.price.toFixed(2)}</p>
             </div>
-            <div>
+            <div className="available">
               <p><strong>Available Pints</strong></p>
               <p>{props.remaining}</p>
+            </div>
+            <div className="sell">
+              <button>pint</button>
+              <button>growler 32oz</button>
+              <button>growler 64oz</button>
             </div>
           </div>
         </div>
@@ -68,6 +73,42 @@ function Keg(props){
 
           .content-right div {
             margin-left: 1.6rem;
+          }
+
+          .sell button {
+            margin-right: 1rem;
+            border: none;
+            transition: background 0.3s ease;
+          }
+
+          .sell button:first-child {
+            background: #8256fd;
+            border-radius: 10px;
+          }
+
+          .sell button:nth-child(2) {
+            background: #da1ec8;
+            border-radius: 10px;
+          }
+
+          .sell button:last-child {
+            background: #e85151;
+            border-radius: 10px;
+          }
+
+          .sell button:first-child:hover {
+            background: green;
+            cursor: pointer;
+          }
+
+          .sell button:nth-child(2):hover {
+            background: green;
+            cursor: pointer;
+          }
+
+          .sell button:last-child:hover {
+            background: green;
+            cursor: pointer;
           }
           `}
       </style>
