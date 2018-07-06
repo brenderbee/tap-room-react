@@ -18,7 +18,7 @@ _Development Process differences between Angular and React:_
 * React definitely seems to require a much smaller breakdown of components than Angular. For example, a button could be a component in React. This would probably not be the case in React.
 
 Component Structure: <br>
-<img src="https://raw.githubusercontent.com/brenderbee/tap-room-react/master/src/assets/img/component-structure.png" width="800"/>
+<img src="https://raw.githubusercontent.com/brenderbee/tap-room-react/master/src/assets/img/component-structureV2.png" width="800"/>
 
 ## Setup/Installation Requirement
 
