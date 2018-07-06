@@ -8,12 +8,9 @@ import Error404 from './Error404';
 
 class App extends React.Component {
 
-  render(
-    let mainStyles = {
-      margin: '0 10%'
-    };
-    return() {
-      <div style={mainStyles}>
+  render() {
+    return(
+      <div className="main">
         <Header/>
         <Switch>
           <Route exact path='/' component={KegList} />
@@ -38,10 +35,17 @@ class App extends React.Component {
               padding: 1.2rem;
               color: white;
             }
-        `}</style>
+
+            .main {
+              margin: 0 10%;
+            }
+          `}
+        </style>
       </div>
-    }
-  );
+    );
+  }
 }
+
+
 
 export default App;
