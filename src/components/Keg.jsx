@@ -2,6 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Keg(props){
+  
+  function handleSendPint() {
+    props.onSellPint(props.keg);
+  }
+
   return (
     <div className="keg">
       <div className="keg-content">
@@ -23,7 +28,7 @@ function Keg(props){
               <p>{props.remaining}</p>
             </div>
             <div className="sell">
-              <button onClick={props.onSellPint}>pint</button>
+              <button onClick={handleSendPint}>pint</button>
               <button>growler 32oz</button>
               <button>growler 64oz</button>
             </div>
@@ -123,7 +128,8 @@ Keg.propTypes = {
   abv: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   remaining: PropTypes.number.isRequired,
-  onSellPint: PropTypes.func
+  onSellPint: PropTypes.func,
+  keg: PropTypes.object
 };
 
 export default Keg;

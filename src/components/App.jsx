@@ -10,13 +10,11 @@ class App extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      exampleBooleanStateData: false
-    };
     this.handleSellPint = this.handleSellPint.bind(this);
   }
 
-  handleSellPint() {
+  handleSellPint(clickedPint) {
+    console.log(clickedPint);
     console.log('handleSellPint triggered');
   }
 

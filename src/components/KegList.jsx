@@ -65,7 +65,8 @@ function KegList(props) {
           price={keg.price}
           remaining={keg.remaining}
           key={index}
-          onSellPint={props.onSellPint}/>
+          onSellPint={props.onSellPint}
+          keg={keg}/>
       )}
       <style jsx>
         {`
