@@ -14,8 +14,10 @@ class App extends React.Component {
   }
 
   handleSellPint(clickedPint) {
-    console.log(clickedPint);
-    console.log('handleSellPint triggered');
+    console.log(clickedPint.remaining);
+    // if (this.state.masterRemaining > 1) {
+    //   this.setState({masterPlay: (clickedPint.remaining - 1)});
+    // }
   }
 
   render() {
