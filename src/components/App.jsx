@@ -8,12 +8,24 @@ import Error404 from './Error404';
 
 class App extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      exampleBooleanStateData: false
+    };
+    this.handleSellPint = this.handleSellPint.bind(this);
+  }
+
+  handleSellPint() {
+    console.log('handleSellPint triggered');
+  }
+
   render() {
     return(
       <div className="main">
         <Header/>
         <Switch>
-          <Route exact path='/' component={KegList} />
+          <Route exact path='/' render={()=><KegList onSellPint={this.handleSellPint} />}  />
           <Route path='/newkeg' component={NewKegForm} />
           <Route component={Error404} />
         </Switch>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Keg from './Keg';
+import PropTypes from 'prop-types';
 
 var masterKegList = [
   {
@@ -52,7 +53,7 @@ var masterKegList = [
   }
 ];
 
-function KegList() {
+function KegList(props) {
 
   return(
     <div className="keglist">
@@ -63,7 +64,8 @@ function KegList() {
           abv={keg.abv}
           price={keg.price}
           remaining={keg.remaining}
-          key={index}/>
+          key={index}
+          onSellPint={props.onSellPint}/>
       )}
       <style jsx>
         {`
@@ -76,5 +78,9 @@ function KegList() {
     </div>
   );
 }
+
+KegList.propTypes = {
+  onSellPint: PropTypes.func
+};
 
 export default KegList;

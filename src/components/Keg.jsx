@@ -23,7 +23,7 @@ function Keg(props){
               <p>{props.remaining}</p>
             </div>
             <div className="sell">
-              <button>pint</button>
+              <button onClick={props.onSellPint}>pint</button>
               <button>growler 32oz</button>
               <button>growler 64oz</button>
             </div>
@@ -122,7 +122,8 @@ Keg.propTypes = {
   description: PropTypes.string.isRequired,
   abv: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
-  remaining: PropTypes.number.isRequired
+  remaining: PropTypes.number.isRequired,
+  onSellPint: PropTypes.func
 };
 
 export default Keg;
