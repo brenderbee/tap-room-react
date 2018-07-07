@@ -18,7 +18,6 @@ class App extends React.Component {
 
   handleSellPint(clickedPint) {
     console.log(clickedPint.remaining);
-    this.setState({masterRemaining: (clickedPint.remaining - 1)});
   }
 
   render() {
