@@ -10,14 +10,15 @@ class App extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      masterRemaining: null
+    };
     this.handleSellPint = this.handleSellPint.bind(this);
   }
 
   handleSellPint(clickedPint) {
     console.log(clickedPint.remaining);
-    // if (this.state.masterRemaining > 1) {
-    //   this.setState({masterPlay: (clickedPint.remaining - 1)});
-    // }
+    this.setState({masterRemaining: (clickedPint.remaining - 1)});
   }
 
   render() {
@@ -25,7 +26,11 @@ class App extends React.Component {
       <div className="main">
         <Header/>
         <Switch>
-          <Route exact path='/' render={()=><KegList onSellPint={this.handleSellPint} />}  />
+          <Route exact path='/' render={()=>
+              <KegList
+                remaining={this.state.masterRemaining}
+                onSellPint={this.handleSellPint} />}
+              />
           <Route path='/newkeg' component={NewKegForm} />
           <Route component={Error404} />
         </Switch>

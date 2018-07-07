@@ -81,6 +81,7 @@ function KegList(props) {
 }
 
 KegList.propTypes = {
+  remaining: PropTypes.number,
   onSellPint: PropTypes.func
 };
 
