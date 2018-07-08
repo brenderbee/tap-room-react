@@ -6,11 +6,12 @@ function KegList(props) {
 
   return(
     <div className="keglist">
-      {props.kegList.map((keg) =>
+      {props.kegList.map((keg, index) =>
         <Keg
           onSellPint={props.onSellPint}
           onSellGrowler={props.onSellGrowler}
           onSellGrowlerLarge={props.onSellGrowlerLarge}
+          key={index}
           keg={keg}/>
       )}
       <style jsx>

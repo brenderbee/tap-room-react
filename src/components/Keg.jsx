@@ -15,6 +15,24 @@ function Keg(props){
     props.onSellGrowlerLarge(props.keg);
   }
 
+  function renderPintButton() {
+    if (props.keg.remaining > 0) {
+      return <button onClick={handleSendPint}>pint</button>;
+    }
+  }
+
+  function renderGrowlerButton() {
+    if (props.keg.remaining > 1) {
+      return <button onClick={handleSendGrowler}>growler 32oz</button>;
+    }
+  }
+
+  function renderGrowlerLargeButton() {
+    if (props.keg.remaining > 3) {
+      return <button onClick={handleSendGrowlerLarge}>growler 64oz</button>;
+    }
+  }
+
   return (
     <div className="keg">
       <div className="keg-content">
@@ -36,9 +54,9 @@ function Keg(props){
               <p>{props.keg.remaining}</p>
             </div>
             <div className="sell">
-              <button onClick={handleSendPint}>pint</button>
-              <button onClick={handleSendGrowler}>growler 32oz</button>
-              <button onClick={handleSendGrowlerLarge}>growler 64oz</button>
+              {renderPintButton()}
+              {renderGrowlerButton()}
+              {renderGrowlerLargeButton()}
             </div>
           </div>
         </div>
