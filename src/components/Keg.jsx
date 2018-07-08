@@ -7,6 +7,10 @@ function Keg(props){
     props.onSellPint(props.keg);
   }
 
+  function handleSendGrowler() {
+    props.onSellGrowler(props.keg);
+  }
+
   return (
     <div className="keg">
       <div className="keg-content">
@@ -29,7 +33,7 @@ function Keg(props){
             </div>
             <div className="sell">
               <button onClick={handleSendPint}>pint</button>
-              <button>growler 32oz</button>
+              <button onClick={handleSendGrowler}>growler 32oz</button>
               <button>growler 64oz</button>
             </div>
           </div>
@@ -129,6 +133,7 @@ Keg.propTypes = {
   price: PropTypes.number.isRequired,
   remaining: PropTypes.number.isRequired,
   onSellPint: PropTypes.func,
+  onSellGrowler: PropTypes.func,
   keg: PropTypes.object
 };
 

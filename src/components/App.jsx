@@ -14,10 +14,15 @@ class App extends React.Component {
       masterRemaining: null
     };
     this.handleSellPint = this.handleSellPint.bind(this);
+    this.handleSellGrowler = this.handleSellGrowler.bind(this);
   }
 
-  handleSellPint(clickedPint) {
-    console.log(clickedPint.remaining);
+  handleSellPint(clickedKeg) {
+    console.log('selected sell pint: ' + clickedKeg.remaining);
+  }
+
+  handleSellGrowler(clickedKeg) {
+    console.log('selected sell growler: ' + clickedKeg.remaining);
   }
 
   render() {
@@ -28,7 +33,8 @@ class App extends React.Component {
           <Route exact path='/' render={()=>
               <KegList
                 remaining={this.state.masterRemaining}
-                onSellPint={this.handleSellPint} />}
+                onSellPint={this.handleSellPint}
+                onSellGrowler={this.handleSellGrowler} />}
               />
           <Route path='/newkeg' component={NewKegForm} />
           <Route component={Error404} />
