@@ -11,11 +11,12 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterRemaining: null
+      masterKegList: []
     };
     this.handleSellPint = this.handleSellPint.bind(this);
     this.handleSellGrowler = this.handleSellGrowler.bind(this);
     this.handleSellGrowlerLarge = this.handleSellGrowlerLarge.bind(this);
+    this.handleAddingNewKegToList = this.handleAddingNewKegToList.bind(this);
   }
 
   handleSellPint(clickedKeg) {
@@ -28,6 +29,12 @@ class App extends React.Component {
 
   handleSellGrowlerLarge(clickedKeg) {
     console.log('selected sell large growler: ' + clickedKeg.remaining);
+  }
+
+  handleAddingNewKegToList(newKeg){
+    var newMasterKegList = this.state.masterKegList.slice();
+    newMasterKegList.push(newKeg);
+    this.setState({masterKegList: newMasterKegList});
   }
 
   render() {
