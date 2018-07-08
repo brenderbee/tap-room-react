@@ -67,6 +67,7 @@ function KegList(props) {
           key={index}
           onSellPint={props.onSellPint}
           onSellGrowler={props.onSellGrowler}
+          onSellGrowlerLarge={props.onSellGrowlerLarge}
           keg={keg}/>
       )}
       <style jsx>
@@ -84,7 +85,8 @@ function KegList(props) {
 KegList.propTypes = {
   remaining: PropTypes.number,
   onSellPint: PropTypes.func,
-  onSellGrowler: PropTypes.func
+  onSellGrowler: PropTypes.func,
+  onSellGrowlerLarge: PropTypes.func
 };
 
 export default KegList;
