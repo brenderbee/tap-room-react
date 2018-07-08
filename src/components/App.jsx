@@ -32,6 +32,7 @@ class App extends React.Component {
   }
 
   handleAddingNewKegToList(newKeg){
+    debugger;
     var newMasterKegList = this.state.masterKegList.slice();
     newMasterKegList.push(newKeg);
     this.setState({masterKegList: newMasterKegList});

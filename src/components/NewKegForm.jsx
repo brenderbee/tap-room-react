@@ -73,7 +73,7 @@ function NewKegForm(props) {
               placeholder="enter price"
             />
           </div>
-          <button>Add Keg</button>
+          <button type="submit">Add Keg</button>
         </form>
       </div>
       <style jsx>
