@@ -27,7 +27,10 @@ class App extends React.Component {
   }
 
   handleSellGrowler(clickedKeg) {
-    console.log('selected sell growler: ' + clickedKeg.remaining);
+    let index = this.state.masterKegList.indexOf(clickedKeg);
+    clickedKeg.remaining = clickedKeg.remaining - 2;
+    let newMasterKegList = this.state.masterKegList.splice(index, 1, clickedKeg);
+    this.setState({masterKegList: newMasterKegList});
   }
 
   handleSellGrowlerLarge(clickedKeg) {
