@@ -27,7 +27,7 @@ function NewKegForm(props) {
         <form onSubmit={handleNewKegFormSubmission}>
           <h2>Add New Keg</ h2>
           <div className="form-group">
-            <label for="brewer">Brewer</label><br/>
+            <label htmlFor="brewer">Brewer</label><br/>
             <input
               type="text"
               className="form-control"
@@ -37,7 +37,7 @@ function NewKegForm(props) {
             />
           </div>
           <div className="form-group">
-            <label for="name">Beer Name</label><br/>
+            <label htmlFor="name">Beer Name</label><br/>
             <input
               type="text"
               className="form-control"
@@ -47,7 +47,7 @@ function NewKegForm(props) {
             />
           </div>
           <div className="form-group">
-            <label for="abv">ABV</label><br/>
+            <label htmlFor="abv">ABV</label><br/>
             <input
               type="text"
               className="form-control"
@@ -57,7 +57,7 @@ function NewKegForm(props) {
             />
           </div>
           <div className="form-group">
-            <label for="desc">description</label><br/>
+            <label htmlFor="desc">description</label><br/>
             <input
               type="text"
               className="form-control"
@@ -67,7 +67,7 @@ function NewKegForm(props) {
             />
           </div>
           <div className="form-group">
-            <label for="price">price</label><br/>
+            <label htmlFor="price">price</label><br/>
             <input
               type="text"
               className="form-control"
@@ -77,7 +77,7 @@ function NewKegForm(props) {
             />
           </div>
           <div className="form-group">
-            <label for="keg-size">Keg Size</label><br/>
+            <label htmlFor="keg-size">Keg Size</label><br/>
             <input
               type="text"
               className="form-control"

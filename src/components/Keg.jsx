@@ -107,6 +107,7 @@ function Keg(props){
           }
 
           .sell button {
+            background:red;
             margin-right: 1rem;
             border: none;
             transition: background 0.3s ease;
@@ -122,7 +123,7 @@ function Keg(props){
             border-radius: 10px;
           }
 
-          .sell button:last-child {
+          .sell button:nth-child(3) {
             background: #e85151;
             border-radius: 10px;
           }
@@ -137,7 +138,7 @@ function Keg(props){
             cursor: pointer;
           }
 
-          .sell button:last-child:hover {
+          .sell button:nth-child(3):hover {
             background: green;
             cursor: pointer;
           }
