@@ -7,15 +7,17 @@ function NewKegForm(props) {
   let _abv = null;
   let _price = null;
   let _description = null;
+  let _remaining = null;
 
   function handleNewKegFormSubmission(event) {
     event.preventDefault();
-    props.onNewKegCreation({name: _name.value, brewer: _brewer.value, abv: _abv.value, price: _price.value, description: _description.value});
+    props.onNewKegCreation({name: _name.value, brewer: _brewer.value, abv: _abv.value, price: parseInt(_price.value), description: _description.value, remaining: parseInt(_remaining.value)});
     _name.value = '';
     _brewer.value = '';
     _abv.value = '';
     _price.value = '';
     _description.value = '';
+    _remaining.value = '';
   }
 
   return(
@@ -71,6 +73,16 @@ function NewKegForm(props) {
               id="price"
               ref={(input) => {_price = input;}}
               placeholder="enter price"
+            />
+          </div>
+          <div className="form-group">
+            <label for="keg-size">Keg Size</label><br/>
+            <input
+              type="text"
+              className="form-control"
+              id="remaining"
+              ref={(input) => {_remaining = input;}}
+              placeholder="enter pints in keg"
             />
           </div>
           <button type="submit">Add Keg</button>

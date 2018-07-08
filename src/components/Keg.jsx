@@ -135,7 +135,7 @@ Keg.propTypes = {
   description: PropTypes.string.isRequired,
   abv: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
-  remaining: PropTypes.number.isRequired,
+  remaining: PropTypes.number,
   onSellPint: PropTypes.func,
   onSellGrowler: PropTypes.func,
   onSellGrowlerLarge: PropTypes.func,
