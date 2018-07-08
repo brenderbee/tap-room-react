@@ -9,11 +9,11 @@ function NewKegForm() {
 
   function handleNewKegFormSubmission(event) {
     event.preventDefault();
-    console.log(_name);
-    console.log(_brewer);
-    console.log(_abv);
-    console.log(_price);
-    console.log(_description);
+    _name.value = '';
+    _brewer.value = '';
+    _abv.value = '';
+    _price.value = '';
+    _description.value = '';
   }
 
   return(
