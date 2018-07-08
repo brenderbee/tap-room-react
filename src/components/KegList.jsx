@@ -57,7 +57,7 @@ function KegList(props) {
 
   return(
     <div className="keglist">
-      {masterKegList.map((keg, index) =>
+      {props.kegList.map((keg, index) =>
         <Keg name={keg.name}
           brewer={keg.brewer}
           description={keg.description}
@@ -83,10 +83,10 @@ function KegList(props) {
 }
 
 KegList.propTypes = {
-  remaining: PropTypes.number,
   onSellPint: PropTypes.func,
   onSellGrowler: PropTypes.func,
-  onSellGrowlerLarge: PropTypes.func
+  onSellGrowlerLarge: PropTypes.func,
+  kegList: PropTypes.array
 };
 
 export default KegList;
