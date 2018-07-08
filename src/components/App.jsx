@@ -17,27 +17,26 @@ class App extends React.Component {
     this.handleSellGrowler = this.handleSellGrowler.bind(this);
     this.handleSellGrowlerLarge = this.handleSellGrowlerLarge.bind(this);
     this.handleAddingNewKegToList = this.handleAddingNewKegToList.bind(this);
+    this.updateKegOnSell = this.updateKegOnSell.bind(this);
+  }
+
+  updateKegOnSell(clickedKeg, pintsSold) {
+    let index = this.state.masterKegList.indexOf(clickedKeg);
+    clickedKeg.remaining = clickedKeg.remaining - pintsSold;
+    let newMasterKegList = this.state.masterKegList.slice();
+    return newMasterKegList.splice(index, 1, clickedKeg);
   }
 
   handleSellPint(clickedKeg) {
-    let index = this.state.masterKegList.indexOf(clickedKeg);
-    clickedKeg.remaining = clickedKeg.remaining - 1;
-    let newMasterKegList = this.state.masterKegList.splice(index, 1, clickedKeg);
-    this.setState({masterKegList: newMasterKegList});
+    this.setState({masterKegList: this.updateKegOnSell(clickedKeg, 1)});
   }
 
   handleSellGrowler(clickedKeg) {
-    let index = this.state.masterKegList.indexOf(clickedKeg);
-    clickedKeg.remaining = clickedKeg.remaining - 2;
-    let newMasterKegList = this.state.masterKegList.splice(index, 1, clickedKeg);
-    this.setState({masterKegList: newMasterKegList});
+    this.setState({masterKegList: this.updateKegOnSell(clickedKeg, 2)});
   }
 
   handleSellGrowlerLarge(clickedKeg) {
-    let index = this.state.masterKegList.indexOf(clickedKeg);
-    clickedKeg.remaining = clickedKeg.remaining - 4;
-    let newMasterKegList = this.state.masterKegList.splice(index, 1, clickedKeg);
-    this.setState({masterKegList: newMasterKegList});
+    this.setState({masterKegList: this.updateKegOnSell(clickedKeg, 4)});
   }
 
   handleAddingNewKegToList(newKeg){
