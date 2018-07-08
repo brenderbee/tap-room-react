@@ -36,12 +36,12 @@ class App extends React.Component {
         <Header/>
         <Switch>
           <Route exact path='/' render={()=>
-              <KegList
-                remaining={this.state.masterRemaining}
-                onSellPint={this.handleSellPint}
-                onSellGrowler={this.handleSellGrowler}
-                onSellGrowlerLarge={this.handleSellGrowlerLarge} />}
-              />
+            <KegList
+              remaining={this.state.masterRemaining}
+              onSellPint={this.handleSellPint}
+              onSellGrowler={this.handleSellGrowler}
+              onSellGrowlerLarge={this.handleSellGrowlerLarge} />}
+          />
           <Route path='/newkeg' component={NewKegForm} />
           <Route component={Error404} />
         </Switch>

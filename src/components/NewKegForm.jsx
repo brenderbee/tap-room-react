@@ -1,31 +1,75 @@
 import React from 'react';
 
 function NewKegForm() {
+  let _name = null;
+  let _brewer = null;
+  let _abv = null;
+  let _price = null;
+  let _description = null;
+
+  function handleNewKegFormSubmission(event) {
+    event.preventDefault();
+    console.log(_name);
+    console.log(_brewer);
+    console.log(_abv);
+    console.log(_price);
+    console.log(_description);
+  }
 
   return(
     <div>
       <div className="content">
-        <form>
+        <form onSubmit={handleNewKegFormSubmission}>
           <h2>Add New Keg</ h2>
           <div className="form-group">
             <label for="brewer">Brewer</label><br/>
-            <input type="text" className="form-control" id="brewer"/>
+            <input
+              type="text"
+              className="form-control"
+              id="brewer"
+              ref={(input) => {_brewer = input;}}
+              placeholder="enter brewer name"
+            />
           </div>
           <div className="form-group">
             <label for="name">Beer Name</label><br/>
-            <input type="text" className="form-control" id="name"/>
+            <input
+              type="text"
+              className="form-control"
+              id="name"
+              ref={(input) => {_name = input;}}
+              placeholder="enter beer name"
+            />
           </div>
           <div className="form-group">
             <label for="abv">ABV</label><br/>
-            <input type="text" className="form-control" id="beer"/>
+            <input
+              type="text"
+              className="form-control"
+              id="beer"
+              ref={(input) => {_abv = input;}}
+              placeholder="enter ABV content"
+            />
           </div>
           <div className="form-group">
             <label for="desc">description</label><br/>
-            <input type="text" className="form-control" id="desc"/>
+            <input
+              type="text"
+              className="form-control"
+              id="desc"
+              ref={(input) => {_description = input;}}
+              placeholder="enter beer description"
+            />
           </div>
           <div className="form-group">
             <label for="price">price</label><br/>
-            <input type="text" className="form-control" id="price"/>
+            <input
+              type="text"
+              className="form-control"
+              id="price"
+              ref={(input) => {_price = input;}}
+              placeholder="enter price"
+            />
           </div>
           <button>Add Keg</button>
         </form>
