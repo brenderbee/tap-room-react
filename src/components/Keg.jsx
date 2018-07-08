@@ -19,21 +19,21 @@ function Keg(props){
     <div className="keg">
       <div className="keg-content">
         <div className="title">
-          <h3>{props.brewer} <span>{props.name}</span></h3>
+          <h3>{props.keg.brewer} <span>{props.keg.name}</span></h3>
         </div>
         <div className="main-content">
           <div className="content-left">
-            <p className="desc">{props.description}</p>
-            <p>ABV {props.abv}</p>
+            <p className="desc">{props.keg.description}</p>
+            <p>ABV {props.keg.abv}</p>
           </div>
           <div className="content-right">
             <div className="price">
               <p><strong>16oz</strong></p>
-              <p>$ {props.price.toFixed(2)}</p>
+              <p>$ {props.keg.price.toFixed(2)}</p>
             </div>
             <div className="available">
               <p><strong>Available Pints</strong></p>
-              <p>{props.remaining}</p>
+              <p>{props.keg.remaining}</p>
             </div>
             <div className="sell">
               <button onClick={handleSendPint}>pint</button>
@@ -130,12 +130,6 @@ function Keg(props){
 }
 
 Keg.propTypes = {
-  name: PropTypes.string.isRequired,
-  brewer: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  abv: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
-  remaining: PropTypes.number,
   onSellPint: PropTypes.func,
   onSellGrowler: PropTypes.func,
   onSellGrowlerLarge: PropTypes.func,
