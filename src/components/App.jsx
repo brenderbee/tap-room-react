@@ -21,10 +21,11 @@ class App extends React.Component {
   }
 
   updateKegOnSell(clickedKeg, pintsSold) {
-    let index = this.state.masterKegList.indexOf(clickedKeg);
-    clickedKeg.remaining = clickedKeg.remaining - pintsSold;
+    const index = this.state.masterKegList.indexOf(clickedKeg);
+    const updatedKeg = Object.assign({}, clickedKeg, {remaining: (clickedKeg.remaining - pintsSold)});
     let newMasterKegList = this.state.masterKegList.slice();
-    return newMasterKegList.splice(index, 1, clickedKeg);
+    newMasterKegList.splice(index, 1, updatedKeg);
+    return newMasterKegList;
   }
 
   handleSellPint(clickedKeg) {
