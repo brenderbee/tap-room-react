@@ -14,11 +14,11 @@ function NewKegForm(props) {
     event.preventDefault();
 
     if (isNaN(_abv.value)) {
-      alert("please enter valid ABV number");
+      alert('please enter valid ABV number');
     } else if (isNaN(_price.value)) {
-      alert("please enter valid price");
+      alert('please enter valid price');
     } else if (isNaN(_remaining.value)) {
-      alert("please enter valid keg size in pints");
+      alert('please enter valid keg size in pints');
     }
     props.onNewKegCreation({name: _name.value, brewer: _brewer.value, abv: parseInt(_abv.value), price: parseInt(_price.value), description: _description.value, remaining: parseInt(_remaining.value), id: v4()});
     _name.value = '';
