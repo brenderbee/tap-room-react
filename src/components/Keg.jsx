@@ -21,7 +21,7 @@ function Keg(props){
         <div className="title">
           <h3>{props.keg.brewer}
             <span> {props.keg.name} </span>
-            {props.keg.remaining < 10 && props.keg.remaining > 1 ? <span className="warning">(Low)</span> : null}
+            {props.keg.remaining < 10 && props.keg.remaining > 0 ? <span className="warning">(Low)</span> : null}
             {props.keg.remaining < 1 ? <span className="warning">(not available)</span> : null}
           </h3>
 
