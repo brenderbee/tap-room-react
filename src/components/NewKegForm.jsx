@@ -12,7 +12,15 @@ function NewKegForm(props) {
 
   function handleNewKegFormSubmission(event) {
     event.preventDefault();
-    props.onNewKegCreation({name: _name.value, brewer: _brewer.value, abv: _abv.value, price: parseInt(_price.value), description: _description.value, remaining: parseInt(_remaining.value), id: v4()});
+
+    if (isNaN(_abv.value)) {
+      alert("please enter valid ABV number");
+    } else if (isNaN(_price.value)) {
+      alert("please enter valid price");
+    } else if (isNaN(_remaining.value)) {
+      alert("please enter valid keg size in pints");
+    }
+    props.onNewKegCreation({name: _name.value, brewer: _brewer.value, abv: parseInt(_abv.value), price: parseInt(_price.value), description: _description.value, remaining: parseInt(_remaining.value), id: v4()});
     _name.value = '';
     _brewer.value = '';
     _abv.value = '';
@@ -34,6 +42,7 @@ function NewKegForm(props) {
               id="brewer"
               ref={(input) => {_brewer = input;}}
               placeholder="enter brewer name"
+              required
             />
           </div>
           <div className="form-group">
@@ -44,6 +53,7 @@ function NewKegForm(props) {
               id="name"
               ref={(input) => {_name = input;}}
               placeholder="enter beer name"
+              required
             />
           </div>
           <div className="form-group">
@@ -54,6 +64,7 @@ function NewKegForm(props) {
               id="beer"
               ref={(input) => {_abv = input;}}
               placeholder="enter ABV content"
+              required
             />
           </div>
           <div className="form-group">
@@ -64,6 +75,7 @@ function NewKegForm(props) {
               id="desc"
               ref={(input) => {_description = input;}}
               placeholder="enter beer description"
+              required
             />
           </div>
           <div className="form-group">
@@ -74,6 +86,7 @@ function NewKegForm(props) {
               id="price"
               ref={(input) => {_price = input;}}
               placeholder="enter price"
+              required
             />
           </div>
           <div className="form-group">
@@ -84,6 +97,7 @@ function NewKegForm(props) {
               id="remaining"
               ref={(input) => {_remaining = input;}}
               placeholder="enter pints in keg"
+              required
             />
           </div>
           <button type="submit">Add Keg</button>

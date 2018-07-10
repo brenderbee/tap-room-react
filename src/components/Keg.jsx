@@ -19,7 +19,12 @@ function Keg(props){
     <div className="keg">
       <div className="keg-content">
         <div className="title">
-          <h3>{props.keg.brewer} <span>{props.keg.name}</span></h3>
+          <h3>{props.keg.brewer}
+            <span> {props.keg.name} </span>
+            {props.keg.remaining < 10 && props.keg.remaining > 1 ? <span className="warning">(Low)</span> : null}
+            {props.keg.remaining < 1 ? <span className="warning">(not available)</span> : null}
+          </h3>
+
         </div>
         <div className="main-content">
           <div className="content-left">
@@ -123,6 +128,10 @@ function Keg(props){
           .sell button:nth-child(3):hover {
             background: green;
             cursor: pointer;
+          }
+
+          span.warning {
+            font-size: 1.2rem;
           }
           `}
       </style>
