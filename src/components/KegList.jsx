@@ -4,6 +4,14 @@ import PropTypes from 'prop-types';
 
 function KegList(props) {
 
+  if (props.kegList.length < 1 ) {
+    return(
+      <div className="kegList">
+        <p>Click "Add Keg" to add keg to list.</p>
+      </div>
+    );
+  }
+
   return(
     <div className="keglist">
       {props.kegList.map((keg, index) =>
