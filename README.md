@@ -10,6 +10,8 @@ _This webpage application is designed to be a Tap Room app that tracks kegs. Eac
 
 _This project uses Webpack to bundle and minify the code. The view library is React. Babel is used to transpile ES6. All dependencies required are included in this project._
 
+_View demo site: https://tap-room-tracker.firebaseapp.com/#/
+
 _Development Process differences between Angular and React:_
 * Angular CLI is a framework and uses components that has separate files for styles, markup, and javascript.
 * While React also uses components, it's just a view library and each component contains the styles, markup, and functionality in a single jsx file.
